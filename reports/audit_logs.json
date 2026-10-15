@@ -1,0 +1,129 @@
+[
+  {
+    "run_id": "RUN-20261015-002106-E887",
+    "timestamp": "2026-10-15 00:21:06 UTC",
+    "batch_name": "Batch 1 - Stable Production (In-Distribution)",
+    "model_version": "1.0.0",
+    "model_name": "Customer_Churn_Risk_Predictor",
+    "dataset_rows": 500,
+    "data_drift_status": "HEALTHY",
+    "drifted_features_count": 0,
+    "total_features": 10,
+    "metrics": {
+      "accuracy": 0.736,
+      "precision": 0.59,
+      "recall": 0.3933,
+      "f1": 0.472,
+      "roc_auc": 0.7226,
+      "brier_score": 0.1818
+    },
+    "deltas": {
+      "accuracy": -1.6,
+      "f1": -0.7,
+      "roc_auc": -4.52
+    },
+    "decision": "PASS_HEALTHY",
+    "priority": "LOW",
+    "reasons": [
+      "All statistical and performance metrics within expected thresholds."
+    ],
+    "oci_event_payload": {
+      "eventType": "com.oraclecloud.datascience.modelmonitoring.driftalert",
+      "cloudEventsVersion": "0.1",
+      "source": "ocid1.datasciencemonitor.oc1.iad.RUN-20261015-002106-E887",
+      "data": {
+        "modelId": "ocid1.datasciencemodel.oc1.iad.amaaaaaa72...",
+        "modelVersion": "1.0.0",
+        "status": "PASS_HEALTHY",
+        "driftRatio": 0.0,
+        "deltaF1": -0.7,
+        "action": "none"
+      }
+    }
+  },
+  {
+    "run_id": "RUN-20261014-235343-3FB5",
+    "timestamp": "2026-10-14 23:53:43 UTC",
+    "batch_name": "Test Batch 1",
+    "model_version": "1.0.0",
+    "model_name": "Customer_Churn_Risk_Predictor",
+    "dataset_rows": 500,
+    "data_drift_status": "HEALTHY",
+    "drifted_features_count": 0,
+    "total_features": 10,
+    "metrics": {
+      "accuracy": 0.736,
+      "precision": 0.59,
+      "recall": 0.3933,
+      "f1": 0.472,
+      "roc_auc": 0.7226,
+      "brier_score": 0.1818
+    },
+    "deltas": {
+      "accuracy": -1.6,
+      "f1": -0.7,
+      "roc_auc": -4.52
+    },
+    "decision": "PASS_HEALTHY",
+    "priority": "LOW",
+    "reasons": [
+      "All statistical and performance metrics within expected thresholds."
+    ],
+    "oci_event_payload": {
+      "eventType": "com.oraclecloud.datascience.modelmonitoring.driftalert",
+      "cloudEventsVersion": "0.1",
+      "source": "ocid1.datasciencemonitor.oc1.iad.RUN-20261014-235343-3FB5",
+      "data": {
+        "modelId": "ocid1.datasciencemodel.oc1.iad.amaaaaaa72...",
+        "modelVersion": "1.0.0",
+        "status": "PASS_HEALTHY",
+        "driftRatio": 0.0,
+        "deltaF1": -0.7,
+        "action": "none"
+      }
+    }
+  },
+  {
+    "run_id": "RUN-20261014-234701-0A47",
+    "timestamp": "2026-10-14 23:47:01 UTC",
+    "batch_name": "Test Batch 1",
+    "model_version": "1.0.0",
+    "model_name": "Customer_Churn_Risk_Predictor",
+    "dataset_rows": 500,
+    "data_drift_status": "HEALTHY",
+    "drifted_features_count": 0,
+    "total_features": 10,
+    "metrics": {
+      "accuracy": 0.758,
+      "precision": 0.6408,
+      "recall": 0.44,
+      "f1": 0.5217,
+      "roc_auc": 0.7301,
+      "brier_score": 0.1806
+    },
+    "deltas": {
+      "accuracy": -11.45,
+      "f1": -22.05,
+      "roc_auc": -21.52
+    },
+    "decision": "TRIGGER_RETRAINING",
+    "priority": "CRITICAL",
+    "reasons": [
+      "Model F1 score degraded by -22.05%, breaching the -10.0% SLA threshold.",
+      "Model Accuracy degraded by -11.45%, breaching the -8.0% SLA threshold."
+    ],
+    "oci_event_payload": {
+      "eventType": "com.oraclecloud.datascience.modelmonitoring.driftalert",
+      "cloudEventsVersion": "0.1",
+      "source": "ocid1.datasciencemonitor.oc1.iad.RUN-20261014-234701-0A47",
+      "data": {
+        "modelId": "ocid1.datasciencemodel.oc1.iad.amaaaaaa72...",
+        "modelVersion": "1.0.0",
+        "status": "TRIGGER_RETRAINING",
+        "driftRatio": 0.0,
+        "deltaF1": -22.05,
+        "action": "trigger_pipeline_run"
+      }
+    }
+  }
+]
